@@ -1,0 +1,77 @@
+
+$theme-colors : (
+  "primary": #425c5a,
+  "secondary": #a2bfbd,
+  "danger": #d10a00
+);
+
+$custom-colors: (
+  "tersier" : #ffcea2
+);
+
+$theme-colors : map-merge($theme-colors, $custom-colors);
+
+$body-bg : #f3f9f3;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.soal {
+  div.col-12 {
+    display: none;
+    &.current {
+      display: block;
+      animation-name: fade;
+      animation-duration: .5s;
+    }
+    h4 {
+      text-align: center;
+      font-weight: bold;
+      padding-bottom: 1rem;
+      border-bottom: var(--bs-primary) 3px solid;
+      margin-bottom: .75rem;
+    }
+    p {
+      text-align: justify;
+      font-size: 110%;
+      white-space: pre-wrap;
+    }
+    img {
+      max-width: 100%;
+      min-height: 120px;
+    }
+    ul {
+      list-style: none;
+      label {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.nomor-soal-container {
+  max-height: 350px;
+  overflow: auto;
+  align-items: flex-start;
+}
+
+.nomor-soal, .navigasi {
+  flex : 1 0 15%;
+  margin: .25rem;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
