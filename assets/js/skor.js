@@ -80,6 +80,13 @@ const showSkor = (skor) => {
       .addClass('text-danger')
       .html(`Maaf, anda <strong>tidak lolos</strong> ke tahap selanjutnya!`)
   }
+
+  resetLocalStorage()
+}
+
+const resetLocalStorage = () => {
+  localStorage.removeItem('waktu')
+  localStorage.removeItem('jawaban')
 }
 
 window.onload = () => {
