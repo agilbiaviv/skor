@@ -41,9 +41,12 @@ const hitungSkor = async() => {
     }
 
     if(i >= 65) {
+      if(arrJawaban[i] == null || arrJawaban[i] == "") {
+        continue
+      }
+
       let indexOpsi = dataSoal[i].opsi.indexOf(arrJawaban[i])
       let skorTemp = dataSoal[i].kunci[indexOpsi]
-
       skor.tkp += skorTemp
     }
   }
