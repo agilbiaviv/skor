@@ -1,0 +1,2 @@
+# skor
+skor for cpns 
